@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Ecommerce.Services.CouponAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/coupon")]
     public class CouponAPIController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -116,6 +116,7 @@ namespace Ecommerce.Services.CouponAPI.Controllers
         }
 
         [HttpDelete]
+        [Route("{id:int}")]
         public ResponseDto Delete(int id)
         {
             try
