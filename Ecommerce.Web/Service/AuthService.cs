@@ -30,7 +30,7 @@ namespace Ecommerce.Web.Service
                 ApiType = SD.ApiType.POST,
                 Data = loginRequestDto,
                 Url = $"{SD.AuthAPIBase}/api/auth/login"
-            });
+            }, withBearer: false);
         }
 
         public async Task<ResponseDto?> RegisterAsync(RegisterationRequestDto registerationRequestDto)
@@ -40,7 +40,7 @@ namespace Ecommerce.Web.Service
                 ApiType = SD.ApiType.POST,
                 Data = registerationRequestDto,
                 Url = $"{SD.AuthAPIBase}/api/auth/register"
-            });
+            }, withBearer: false);
         }
     }
 }

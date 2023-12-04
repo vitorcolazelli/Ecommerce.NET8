@@ -50,7 +50,8 @@ namespace Ecommerce.Services.AuthAPI.Services
                 return new LoginResponseDto() { User = null, Token = "" };
             }
 
-            var token = _jwtToken.GenerateToken(user);
+            var roles = await _userManager.GetRolesAsync(user);
+            var token = _jwtToken.GenerateToken(user, roles);
 
             UserDto userDto = new()
             {
