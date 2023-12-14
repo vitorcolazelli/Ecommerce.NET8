@@ -9,7 +9,6 @@ namespace Ecommerce.Services.ProductAPI.Controllers
 {
     [ApiController]
     [Route("api/product")]
-    [Authorize]
     public class ProductAPIController : ControllerBase
     {
         private readonly AppDbContext _context;
