@@ -1,0 +1,6 @@
+@Eccomerce.Services.ShoppingCartAPI_HostAddress = http://localhost:5125
+
+GET {{Eccomerce.Services.ShoppingCartAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
